@@ -1,11 +1,9 @@
-package jpa_basic.ex1_hello_jpa.hellojpa;
+package jpa_basic.ex1_hello_jpa;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
-
-import java.util.List;
 
 public class JpaMain {
     public static void main(String[] args) {
@@ -16,12 +14,12 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
 
-        try{
+        try {
 
             tx.commit();
-        } catch (Exception e){
+        } catch (Exception e) {
             tx.rollback();
-        } finally{
+        } finally {
             em.close();
         }
 
