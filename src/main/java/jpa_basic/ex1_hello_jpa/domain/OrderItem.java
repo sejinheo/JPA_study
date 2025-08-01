@@ -3,7 +3,7 @@ package jpa_basic.ex1_hello_jpa.domain;
 import jakarta.persistence.*;
 
 @Entity
-public class OrderItem {
+public class OrderItem extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -8,7 +8,7 @@ import java.util.List;
 import static jakarta.persistence.GenerationType.AUTO;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = AUTO)
